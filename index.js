@@ -51,6 +51,11 @@ function generateTriviaHtml(arrayOfQuestions, index, currentPoints) {
 
   buttons.forEach(function (element) {
     element.addEventListener("click", function () {
+      // we need to check if the answer is correct or not
+      // if correct points + 10 and go to the next question using a fn
+      // check if element.innerHtml is the same as the question arrays on that index
+      // else correct points - 3 and go to the next question using a fn
+
       console.log(element.innerHTML);
     });
   });
