@@ -46,6 +46,14 @@ function generateTriviaHtml(arrayOfQuestions, index, currentPoints) {
 `;
 
   trivial.innerHTML = trivialToHtml;
+
+  let buttons = document.querySelectorAll(".option-btn");
+
+  buttons.forEach(function (element) {
+    element.addEventListener("click", function () {
+      console.log(element.innerHTML);
+    });
+  });
 }
 
 generateTriviaHtml(questions, index, points);
