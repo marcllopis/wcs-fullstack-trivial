@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url("https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif?cid=ecf05e47emhf4h6myyv7oyuusuesbwlfdauwaah7y0xvpxk9&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > h1 {
+  color: white;
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-weight: lighter;
+}
+
+.trivial {
+  background-color: lightcyan;
+  width: 60%;
+  height: 40%;
+  border: 3px solid green;
+}
+
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.row-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.option-btn {
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 10px;
+}
