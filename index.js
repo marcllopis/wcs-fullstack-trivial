@@ -62,11 +62,25 @@ function generateTriviaHtml(arrayOfQuestions, index, currentPoints) {
       if (chosenElement === answerCheck) {
         points = points + 10;
         index = index + 1;
-        generateTriviaHtml(questions, index, points);
+        if (index === questions.length) {
+          trivial.innerHTML = `
+            <h1>Congrats!</h1>
+            <h3>You did ${points} points!</h3>
+          `;
+        } else {
+          generateTriviaHtml(questions, index, points);
+        }
       } else {
         points = points - 3;
         index = index + 1;
-        generateTriviaHtml(questions, index, points);
+        if (index === questions.length) {
+          trivial.innerHTML = `
+            <h1>Congrats!</h1>
+            <h3>You did ${points} points!</h3>
+          `;
+        } else {
+          generateTriviaHtml(questions, index, points);
+        }
       }
 
       // chosenElement === answerCheck
