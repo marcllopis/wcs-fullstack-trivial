@@ -56,7 +56,24 @@ function generateTriviaHtml(arrayOfQuestions, index, currentPoints) {
       // check if element.innerHtml is the same as the question arrays on that index
       // else correct points - 3 and go to the next question using a fn
 
-      console.log(element.innerHTML);
+      let chosenElement = element.innerHTML;
+      let answerCheck = arrayOfQuestions[index].correctAnswer;
+
+      if (chosenElement === answerCheck) {
+        points = points + 10;
+        index = index + 1;
+        generateTriviaHtml(questions, index, points);
+      } else {
+        points = points - 3;
+        index = index + 1;
+        generateTriviaHtml(questions, index, points);
+      }
+
+      // chosenElement === answerCheck
+      //   ? (points = points + 10)
+      //   : (points = points - 3);
+
+      console.log(points);
     });
   });
 }
